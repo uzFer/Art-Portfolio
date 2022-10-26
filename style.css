@@ -12,7 +12,7 @@
 /* NAVIGATION BAR */
 .navbar {
   background: #ffffff;
-  height: 70px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 0px;
 }
 
 #navbar__logo {
@@ -110,7 +110,7 @@
   .navbar__menu.active {
     background: #ffffff;
     top: 100%;
-    opacity: 1;
+    opacity: 100%;
     transition: all 0.5s ease;
     z-index: 99;
     height: 60vh;
@@ -188,7 +188,6 @@
   background-position: absolute;
   background-size: 100%;
   margin: 0;
-  max-height: 100%;
   opacity: 80%;
 }
 
@@ -198,49 +197,80 @@
   justify-content: center;
   align-items: left;
   max-width: 1200px;
-  height: 800px;
+  height: 1050px;
   text-align: left;
   padding: 45px;
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 65% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
 .hero__heading {
-  margin-top: 40px;
+  margin-top: -20cm;
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 24px;
-  opacity: 80%;
+  opacity: 90%;
   color: #ffffff;
   font-family: courier;
+  border-right: .15em solid white; 
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(40, end) forwards, blink-caret 0.5s step-end infinite;
 }
 
-.hero__heading2 {
-  font-size: 120px;
-  text-align: right;
-  color: #ffffff; 
-  margin-top: 210px;
-  opacity: 90%;
-  text-shadow: 3px 0 3px #c7c7c7;
-}
-
-@media (min-width: 601px) and (max-width: 700px) {
+@media (min-width: 350px) and (max-width: 600px) {
   .hero__heading {
-    margin-top: 90px;
+    margin-top: 0px;
     transition: all 0.3s ease-in-out;
     font-size: 30px;
     text-align: left;
     color: #ffffff;
-    opacity: 80%;
+    opacity: 100%;
   }
   
-
   .hero__heading2 {
     transition: all 0.3s ease-in-out;
-    font-size: 70px;
+    font-size: 60px;
     text-align: right;
     text-shadow: 3px 0 3px #c7c7c7;
     margin-top: 360px;
-    opacity: 90%;
-    margin-bottom: 60px;
+    opacity: 100%;
+    margin-bottom: 65px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 57% }
+  }
+  
+  .hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    max-width: 1200px;
+    height: 800px;
+    text-align: left;
+    padding: 45px;
+  }
+  
+  .hero__heading {
+    margin-top: -18cm;
+    transition: all 0.3s ease-in-out;
+    font-size: 30px;
+    text-align: left;
+    color: #ffffff;
+    opacity: 1;
   }
 }
 
@@ -329,13 +359,13 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 1200px;
-  height: 700px;
+  width: 1300px;
+  height: 800px;
   background-color: #f2f2f2;
   font-size: 14px;
 }
 
-.container .container-inner {
+.container-inner {
   width: 100%;
   height: 100%;
   display: flex;
@@ -346,7 +376,7 @@
   -webkit-animation: fade-in 1.5s ease, slide-in 1.2s ease;
 }
 
-.container .container-inner .main-content {
+.main-content {
   flex-basis: 50%;
   order: 1;
   align-self: center;
@@ -699,9 +729,24 @@
   padding: 50px;
 }
 
-.image__container2 .image {
+.image {
   height: 400px;
-  width: 300px;
+  width: 350px;
+}
+
+.image2 {
+  height: 400px;
+  width: 320px;
+}
+
+.image3 {
+  height: 400px;
+  width: 400px;
+}
+
+.image4 {
+  height: 400px;
+  width: 500px;
 }
 
 .reveal{
@@ -759,8 +804,8 @@
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
-  height: 400px;
+  width: 1400px;
+  height: 700px;
   background: #f2f2f2;
   font-size: 14px;
   animation: fade-in 1.5s ease;
@@ -796,6 +841,7 @@ input[type=submit] {
   border: none;
   cursor: pointer;
   float: right;
+  margin-top: 30px;
 }
 
 .contactme {
@@ -806,13 +852,13 @@ input[type=submit] {
 .col-25 {
   float: left;
   width: 25%;
-  margin-top: 6px;
+  margin-top: 16px;
 }
 
 .col-75 {
   float: left;
   width: 75%;
-  margin-top: 6px;
+  margin-top: 16px;
 }
 
 .row:after {
@@ -852,7 +898,7 @@ input[type=submit] {
     width: 80%;
     padding: 12px;
     margin-left: 50px;
-    margin-top: 7px;
+    margin-top: 18px;
     border: 1px solid #c2c2c2;
     box-sizing: border-box;
     resize: vertical;
